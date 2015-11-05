@@ -1,7 +1,6 @@
 #!/usr/bin/env node
 
 var app = require('./app');
-var debug = require('debug')('media:server');
 var http = require('http');
 
 var port = process.env.PORT || '3000';
@@ -9,7 +8,7 @@ var server = http.createServer(app);
 
 server.listen(port);
 server.on('error', onError);
-server.on('listening', () => debug(`Listening on port ${port}`));
+server.on('listening', () => console.log(`Listening on port ${port}`));
 
 function onError(error) {
   if (error.syscall !== 'listen') {
