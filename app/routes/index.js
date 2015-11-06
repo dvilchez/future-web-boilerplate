@@ -1,13 +1,11 @@
 import express from 'express';
-import { Route, match, RoutingContext } from 'react-router';
 import hello from './hello';
+import { Router, Route, match, RoutingContext } from 'react-router';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
-import Router from 'react-router';
-import Hello from 'hello-cmp';
+import routes from '../client/routes';
 
 const router = express.Router();
-const routes = (<Route component={ Hello } path="/" />);
 
 router.use('/api/hello', hello);
 router.get('/', function (req, res) {
