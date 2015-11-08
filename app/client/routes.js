@@ -1,7 +1,7 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Route, Router } from 'react-router';
 import Hello from 'hello-cmp';
 
-const routes = (<Route component={ Hello } path="/" />);
+const routes = (<Router><Route component={ Hello } path="/" /></Router>);
 
 export default routes;
