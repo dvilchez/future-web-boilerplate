@@ -1,5 +1,6 @@
 import express from 'express';
 import hello from './hello';
+import sessions from './sessions';
 import { Router, Route, match, RoutingContext } from 'react-router';
 import { renderToString } from 'react-dom/server';
 import React from 'react';
@@ -8,6 +9,7 @@ import routes from '../client/routes';
 const router = express.Router();
 
 router.use('/api/hello', hello);
+router.use('/api/sessions', sessions);
 router.get('/', function (req, res) {
     match({ routes, location: req.url }, (error, redirectLocation, renderProps) => {
         if (error) {

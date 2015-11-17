@@ -12,6 +12,7 @@
     "epa": "^0.2.1",
     "express": "^4.13.3",
     "immutable": "^3.7.5",
+    "isomorphic-fetch": "^2.2.0",
     "jade": "^1.11.0",
     "morgan": "^1.6.1",
     "react": "^0.14.2",
@@ -19,6 +20,8 @@
     "react-redux": "^4.0.0",
     "react-router": "^1.0.0-rc3",
     "redux": "^3.0.4",
+    "redux-logger": "^2.0.4",
+    "redux-thunk": "^1.0.0",
     "seneca": "^0.7.2",
     "serve-favicon": "^2.3.0",
     "style-loader": "^0.13.0"

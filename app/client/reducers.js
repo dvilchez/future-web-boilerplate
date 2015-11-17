@@ -1,8 +1,13 @@
-import { combineReducers } from 'redux'
-import hello from 'hello-cmp/reducer'
+import Immutable from 'immutable';
+import { LOGGED_USER } from '../../lib/login-cmp/actions'
 
-const helloApp = combineReducers({
-    hello
-})
+const initialState = Immutable.Map({user:'anonymous'});
 
-export default helloApp
+function helloApp(state=initialState, action) {
+    if(action.type === LOGGED_USER){
+        return state.set('user',  action.user);
+    }
+    return state;
+}
+
+export default helloApp;
